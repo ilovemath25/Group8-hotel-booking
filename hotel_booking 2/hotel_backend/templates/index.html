@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='graph.css') }}">
+</head>
+<body class="container mt-5" id ="head">
+    {% include 'layout/menu.html' %}
+    
+    <div class="container" >
+        <div class="heading">
+            <h1>Hotel Management</h1>
+            </div> 
+        <!-- Your dashboard's content goes here -->
+        <div class="container-data">
+            <!-- Three boxes -->
+            <div class="box">
+                <!-- Content for the first box -->
+                <h2>Booking</h2>
+                <p>{{total_bookings}}</p>
+            </div>
+            <div class="box">
+                <!-- Content for the second box -->
+                <h2>Income</h2>
+                <p>{{total_price_sum}} {{room_type_single}} {{room}}</p>
+            </div>
+            
+        </div>
+        <h1>Monthly Average</h1>
+            <div class="simple-bar-chart">
+            
+            <div class="item" style="--clr: #5EB344; --val: {{count_room[0]}}">
+                <div class="label">Single Room</div>
+                <div class="value">{{count_room[0]}}</div>
+            </div>
+            
+            <div class="item" style="--clr: #FCB72A; --val: {{count_room[1]}}">
+                <div class="label">Twin Room</div>
+                <div class="value">{{count_room[1]}}</div>
+            </div>
+            
+            <div class="item" style="--clr: #F8821A; --val: {{count_room[2]}}">
+                <div class="label">King Room</div>
+                <div class="value">{{count_room[2]}}</div>
+            </div>
+            <div class="item" style="--clr: rgb(0, 255, 170) ; --val: {{count_room[3]}}">
+                <div class="label">Queen Room</div>
+                <div class="value">{{count_room[3]}}</div>
+            </div>
+            
+          
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/7006f68f03.js" crossorigin="anonymous"></script>
+   <title>Group 8</title>
+   <link rel="stylesheet" href="static/book.css">
+   <link rel="stylesheet" href="static/header.css">
+   <link rel="stylesheet" href="static/scroll.css">
+   <link rel="stylesheet" href="static/closing.css">
+</head>
+<body>
+   <div class="top-header-content">
+      <div class="home-background-image">
+         <div class="slideshow-container">
+            <div class="mySlides fade"><img src="static/image/book_image1.jpg" class="home-image" style="opacity: .7;"></div>
+            <div class="mySlides fade"><img src="static/image/book_image2.jpg" class="home-image" style="opacity: .7;"></div>
+            <div class="mySlides fade"><img src="static/image/book_image3.jpg" class="home-image" style="opacity: .7;"></div>
+            <div class="mySlides fade"><img src="static/image/book_image4.jpg" class="home-image" style="opacity: .7;"></div>
+         </div>
+         <div class="image-manual">
+            <div class="manual-btn" onclick="currentSlide(1)"></div>
+            <div class="manual-btn" onclick="currentSlide(2)"></div>
+            <div class="manual-btn" onclick="currentSlide(3)"></div>
+            <div class="manual-btn" onclick="currentSlide(4)"></div>
+         </div>
+         <div class="booking-content hidden">
+            <div class="booking-content-success">
+               <div class="confirm-text-success">
+                  Book Confirmed
+               </div>
+               <a href="/" class="confirm-book-button-success">
+                  Back
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="header">
+         <div class="nav-bar">
+            <div class="logo-and-leftmenu">
+               <div class="logo"><a href="/">Group VIII</a></div>
+               <hr style="color: black; height:30px">
+               <div class="menuleft-button" onclick="display_menu()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <div class="menu-nav-bar">
+               <a href="./#room-jump" class="menubutton room">Room</a>
+               <a href="{{ url_for('booking') }}" class="menubutton book-now">Book now</a>
+               <a href="./#promotion-jump" class="menubutton promotion">Promotion</a>
+               <a href="./#about-jump" class="menubutton about">About</a>
+               <div class="lang">
+                  <div class="lang-button">English</div>
+                  <ul class="lang-menu">
+                     <li class="lang-list"><a href="/success" language='English'>English</a></li>
+                     <li class="lang-list"><a href="/success" language='Chinese'>Chinese</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="menu-left">
+            <div class="menu-left-content">
+               <div class="logo-left">Group VIII</div>
+               <hr>
+               <div class="menu-nav-bar-left">
+                  <a href="./#room-jump" class="menubutton-left room" onclick="undisplay_menu()">Room</a>
+                  <a href="{{ url_for('booking') }}" class="menubutton-left book-now">Book now</a>
+                  <a href="./#promotion-jump" class="menubutton-left promotion" onclick="undisplay_menu()">Promotion</a>
+                  <a href="./#about-jump" class="menubutton-left about" onclick="undisplay_menu()">About</a>
+               </div>
+            </div>
+            <div class="menu-left-space" onclick="undisplay_menu()"></div>
+         </div>
+      </div>
+   </div>
+   <div class="closing">
+      <div class="apapun">
+         <div class="Name_Content">
+            <div class="Name_Group8">Group 8:</div>
+            <div>
+               <div class="Name_kevin">楊漢祥 110570037 經管三</div>
+               <div class="Name_bryant">陳軒元 111590058 資工二</div>
+               <div class="Name_wesley">楊君威 111590059 資工二</div>
+               <div class="Name_felicia">鄭秀心 111590060 資工二</div>
+            </div>
+         </div>
+         <div class="Member_Task">
+            <div class="Each_Member_Task">Each member task:</div>
+            <div>
+               <div class="Task_kevin">楊漢祥 110570037 經管三 : Website Design and Testing</div>
+               <div class="Task_bryant">陳軒元 111590058 資工二 : Backend and Database</div>
+               <div class="Task_wesley">楊君威 111590059 資工二 : Frontend</div>
+               <div class="Task_felicia">鄭秀心 111590060 資工二 : Backend and Database </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="static/book.js"></script>
+   <script src="static/scroll.js"></script>
+   <script src="static/translate_confirmed.js"></script>
+</body>
+</html>

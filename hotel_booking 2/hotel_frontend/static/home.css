@@ -1,0 +1,341 @@
+*{
+   padding: 0;
+   margin: 0;
+   overflow-x: hidden;
+}
+html {
+   scroll-behavior: smooth;
+}
+body{
+   background-color: #303030;
+}
+/* top header content */
+.top-header-content{
+   margin-bottom: 38%;
+}
+.home-background-image{
+   overflow: hidden;
+}
+.mySlides{
+   display: none;
+   overflow: hidden;
+}
+.slideshow-container{
+   position: absolute;
+   overflow: hidden;
+   width: 100%;
+}
+.home-image{
+   width: 100%;
+   object-fit: cover;
+   overflow: hidden;
+}
+.image-manual{
+   overflow: hidden;
+   position: absolute;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 30%;
+}
+.manual-btn{
+   overflow: hidden;
+   background-color: #00000062;
+   margin: 5px;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.4s;
+}
+.prev,.next{
+   overflow: hidden;
+   position: absolute;
+   display: block;
+   top: 50%;
+   padding: 16px;
+   font-weight: bold;
+   color: white;
+   transition: 0.6s ease;
+   user-select: none;
+   cursor: pointer;
+   border-radius: 5px;
+}
+.next{
+   right: 0;
+}
+.prev:hover,.next:hover{
+   background-color: #000000cc;
+}
+.active,.manual-btn:hover{
+   background-color: #ffffff9f;
+}
+.fade{
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+@keyframes fade{
+   from {opacity: .4} 
+   to {opacity: 1}
+}
+/* body content */
+.body-content{
+   overflow: hidden;
+}
+/* welcome */
+.welcome{
+   background-color: #83838327;
+   border-radius: 10px;
+   margin: auto;
+   width: 96%;
+   display: flex;
+}
+.logo-body{
+   width: 30%;
+   text-align: center;
+   margin: auto;
+   color: white;
+}
+.welcome-line{
+   margin: 2vh;
+}
+.welcome-text{
+   width: 70%;
+   margin: 3vh;
+   color: white;
+}
+.welcome-text p{
+   font-size: 14px;
+}
+.welcome-text h1{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+/* book now */
+.book-now-button-content{
+   display: flex;
+   justify-content: center;
+   margin: 5vh;
+   margin-top: 8vh;
+}
+.book-now-button{
+   background-color: #ff4d4d;
+   padding: 17px 12% 17px 12%;
+   border-radius: 10px;
+   cursor: pointer;
+   user-select: none;
+   font-weight: bold;
+   color: white;
+   text-decoration: none;
+}
+.book-now-button:active{
+   background-color: #8e2222;
+}
+/* about */
+.hotel-subtitle-content{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.hotel-title-line{
+   width: 42%;
+   margin: auto;
+}
+.hotel-title-title{
+   width: 10%;
+   font-size: 18px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   color: white;
+   margin: 5px;
+}
+.about-content{
+   display: flex;
+   margin: 5vh;
+   overflow: hidden;
+   height: 300px;
+}
+.about-hotel-content-body1{
+   width: 45%;
+   margin: auto;
+   margin-left: 15%;
+   color: white;
+   font-size: 17px;
+   overflow: hidden;
+}
+.about-hotel-content-body2{
+   width: 35%;
+   margin: auto;
+   margin-left: 5vh;
+   margin-right: 7%;
+   color: white;
+   font-size: 17px;
+   overflow: hidden;
+}
+.about-hotel-content-image1{
+   width: 50%;
+   height: 100%;
+   margin: auto;
+   margin-left: 15vh;
+   margin-right: 5vh;
+   overflow: hidden;
+}
+.about-hotel-content-image2{
+   width: 45%;
+   height: 100%;
+   margin: auto;
+   margin-left: 15%;
+   overflow: hidden;
+}
+.about-hotel-image{
+   overflow: hidden;
+   border-radius: 10px;
+   box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.303);
+}
+/* room image hotel */
+.room-image{
+   width: 100%;
+   overflow: hidden;
+}
+.image-container{
+   align-items: center;
+   display: flex;
+   height: 400px;
+   margin: 0 auto;
+   max-width: 1000px;
+   position: relative;
+   overflow: hidden;
+}
+.image-item{
+   height: 200px;
+   border-radius: 10px;
+   opacity: 0;
+   position: absolute;
+   transition: all 0.5s ease-in-out;
+   width: 330px;
+   z-index: 0;
+   background-size: contain;
+}
+.image-item-1{
+   left: 15%;
+   opacity: 0;
+   transform: translateX(-50%);
+}
+.image-item-2, .image-item-4{
+   left: 250px;
+   opacity: 0.8;
+   width: 380px;
+   z-index: 1;
+}
+.image-item-2{
+   left: 30%;
+   transform: translateX(-50%);
+}
+.image-item-3{
+   box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.325);
+   height: 300px;
+   opacity: 1;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 430px;
+   z-index: 2;
+}
+.image-item-4{
+   left: 70%;
+   transform: translateX(-50%);
+}
+.image-controls{
+  display: flex;
+}
+.image-controls button{
+   cursor: pointer;
+   text-transform: capitalize;
+}
+.image-controls-prev,.image-controls-next{
+   position: absolute;
+   color: white;
+   top: 50px;
+   cursor: pointer;
+   background-color: #0000003d;
+   padding: 6px 9px 3px 9px;
+   border-radius: 50%;
+}
+.image-controls-prev i,.image-controls-next i{
+   overflow: hidden;
+}
+.image-controls-next{
+   right: 4px;
+}
+.image-controls-prev:hover,.image-controls-next:hover{
+   font-size: 26px;
+   padding: 6px 12px 3px 12px;
+   top: 46px;
+   overflow: hidden;
+}
+.image-controls-prev:hover{
+   left: 1px;
+}
+.image-controls-next:hover{
+   right: 1px;
+}
+.room-type{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+   color: white;
+   font-size: 18px;
+   overflow: hidden;
+}
+.description-room{
+   color: white;
+   margin: 15px 50px 15px 50px;
+   height: 70%;
+   font-size: 14px;
+   overflow: hidden;
+}
+.room-image nav li{
+   background: #ccc;
+   border-radius: 50%;
+   height: 10px;
+   margin: 0 16px;
+   width: 10px;
+}
+.image-nav li.image-item-selected{
+   background: #555;
+}
+.room-description{
+   background-color: #83838327;
+   border-radius: 10px;
+   width: 75vh;
+   height: 40vh;
+   padding: 5px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin: auto;
+   overflow: hidden;
+}
+.promotion-content .promotion{
+   display: flex;
+   overflow: hidden;
+   margin: 10px 10px 20px 10px;
+}
+.promotion-image{
+   overflow: hidden;
+   margin: 10px;
+   margin-left: 10%;
+   border-radius: 15px;
+   height: 200px;
+   width: 300px;
+}
+.promo-hotel-image{
+   overflow: hidden;
+   border-radius: 15px;
+   height: 200px;
+   width: 300px;
+}
+.promotion-text{
+   margin: auto;
+   color: white;
+   width: 60%;
+}

@@ -1,0 +1,144 @@
+*{
+   padding: 0;
+   margin: 0;
+   overflow-x: hidden;
+}
+html {
+   scroll-behavior: smooth;
+}
+body{
+   background-color: #303030;
+}
+/* top header content */
+.top-header-content{
+   margin-bottom: 50.3%;
+}
+.home-background-image{
+   overflow: hidden;
+}
+.mySlides{
+   display: none;
+   overflow: hidden;
+}
+.slideshow-container{
+   position: absolute;
+   overflow: hidden;
+   width: 100%;
+}
+.home-image{
+   width: 100%;
+   object-fit: cover;
+   overflow: hidden;
+}
+.image-manual{
+   overflow: hidden;
+   position: absolute;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 45%;
+}
+.manual-btn{
+   overflow: hidden;
+   background-color: #00000062;
+   margin: 5px;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.4s;
+}
+.prev,.next{
+   overflow: hidden;
+   position: absolute;
+   display: block;
+   top: 50%;
+   padding: 16px;
+   font-weight: bold;
+   color: white;
+   transition: 0.6s ease;
+   user-select: none;
+   cursor: pointer;
+   border-radius: 5px;
+}
+.next{
+   right: 0;
+}
+.prev:hover,.next:hover{
+   background-color: #000000cc;
+}
+.active,.manual-btn:hover{
+   background-color: #ffffff9f;
+}
+.fade{
+   animation-name: fade;
+   animation-duration: 4s;
+}
+@keyframes fade{
+   from {opacity: .4} 
+   to {opacity: .8}
+}
+/* body content */
+.body-content{
+   overflow: hidden;
+}
+.booking-content{
+   overflow: hidden;
+   position: absolute;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 10%;
+}
+.booking-content-form{
+   overflow: hidden;
+   background-color: #303030;
+   color: white;
+   border-radius: 20px;
+   padding: 30px 20vh 30px 10vh;
+}
+.input-text{
+   margin: 5px 0px 5px 5px;
+}
+.input-booking{
+   padding: 5px;
+}
+.input_content{
+   padding: 8px 100px 8px 10px;
+   border-radius: 10px;
+}
+.confirm-book-button{
+   background-color: #ff4d4d;
+   margin-left: 15px;
+   margin: 6px;
+   padding: 12px 12% 12px 12%;
+   border-radius: 10px;
+   cursor: pointer;
+   user-select: none;
+   color: white;
+   text-decoration: none;
+}
+.confirm-book-button:active{
+   background-color: #8e2222;
+}
+.confirm-text-success{
+   color: white;
+   overflow: hidden;
+   margin-bottom: 20px;
+}
+.booking-content-success{
+   overflow: hidden;
+   background-color: #303030;
+   color: white;
+   border-radius: 20px;
+   padding: 35px 50px 35px 50px;
+}
+.confirm-book-button-success{
+   background-color: #ff4d4d;
+   margin-left: 8px;
+   padding: 12px 30px 12px 30px;
+   border-radius: 10px;
+   cursor: pointer;
+   user-select: none;
+   color: white;
+   text-decoration: none;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/7006f68f03.js" crossorigin="anonymous"></script>
+   <title>Group 8</title>
+   <link rel="stylesheet" href="static/home.css">
+   <link rel="stylesheet" href="static/header.css">
+   <link rel="stylesheet" href="static/scroll.css">
+   <link rel="stylesheet" href="static/closing.css">
+</head>
+<body>
+   <div class="top-header-content">
+      <div class="home-background-image">
+         <div class="slideshow-container">
+            <div class="mySlides fade"><img src="static/image/home_image1.jpeg" class="home-image"></div>
+            <div class="mySlides fade"><img src="static/image/home_image2.jpeg" class="home-image"></div>
+            <div class="mySlides fade"><img src="static/image/home_image3.jpeg" class="home-image"></div>
+            <div class="mySlides fade"><img src="static/image/home_image4.jpeg" class="home-image"></div>
+            <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right"></i></a>
+         </div>
+         <div class="image-manual">
+            <div class="manual-btn" onclick="currentSlide(1)"></div>
+            <div class="manual-btn" onclick="currentSlide(2)"></div>
+            <div class="manual-btn" onclick="currentSlide(3)"></div>
+            <div class="manual-btn" onclick="currentSlide(4)"></div>
+         </div>
+      </div>
+      <div class="header">
+         <div class="nav-bar">
+            <div class="logo-and-leftmenu">
+               <div class="logo"><a href=".">Group VIII</a></div>
+               <hr style="color: black; height:30px">
+               <div class="menuleft-button" onclick="display_menu()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <div class="menu-nav-bar">
+               <a href=".#room-jump" class="menubutton room">Room</a>
+               <a href="{{ url_for('booking') }}" class="menubutton book-now">Book now</a>
+               <a href=".#promotion-jump" class="menubutton promotion">Promotion</a>
+               <a href=".#about-jump" class="menubutton about">About</a>
+               <div class="lang">
+                  <div class="lang-button">English</div>
+                  <ul class="lang-menu">
+                     <li class="lang-list"><a href="." language='English'>English</a></li>
+                     <li class="lang-list"><a href="." language='Chinese'>Chinese</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="menu-left">
+            <div class="menu-left-content">
+               <div class="logo-left">Group VIII</div>
+               <hr>
+               <div class="menu-nav-bar-left">
+                  <a href=".#room-jump" class="menubutton-left room" onclick="undisplay_menu()">Room</a>
+                  <a href="{{ url_for('booking') }}" class="menubutton-left book-now" onclick="undisplay_menu()">Book now</a>
+                  <a href=".#promotion-jump" class="menubutton-left promotion" onclick="undisplay_menu()">Promotion</a>
+                  <a href=".#about-jump" class="menubutton-left about" onclick="undisplay_menu()">About</a>
+               </div>
+            </div>
+            <div class="menu-left-space" onclick="undisplay_menu()"></div>
+         </div>
+      </div>
+   </div>
+   <div class="body-content">
+      <div class="welcome hidden">
+         <div class="logo-body">Group VIII</div>
+         <hr class="welcome-line">
+         <div class="welcome-text">
+            <p class='w1'>WELCOME TO Hotel Group VIII, A LUXURY COMFORT HOTEL, TAIPEI</p>
+            <h1 class='w2'>Discover our 8 star historic hotel in the center of TAIPEI</h2>
+            <p class='w3'>Our exquisite accommodations redefine hospitality, offering a perfect blend of elegance and modern convenience. Immerse yourself in a world of unparalleled service, stylish design, and personalized experiences. At Hotel Group VIII, each stay is a journey into refined living, ensuring a memorable and indulgent escape for every guest.</p>
+         </div>
+      </div>
+      <div class="book-now-button-content">
+         <a href="{{ url_for('booking') }}" class="book-now-button">Book now</a>
+      </div>
+      <div class="about-hotel">
+         <br id="about-jump">
+         <div class="hotel-subtitle-content">
+            <div class="hotel-title-line"><hr></div>
+            <div class="hotel-title-title about-title-body">About</div>
+            <div class="hotel-title-line"><hr></div>
+         </div>
+         <div class="about-hotel-content">
+            <div class="about-content">
+               <div class="about-hotel-content-body1 hidden">
+                  Luxe Simplicity at Group VIII Residences Immerse in opulent living at Group VIII Residences, where our user-friendly website, designed for ages 18-45, ensures a seamless booking experience. Whether you're a frequent traveler, business pro, or vacation enthusiast, simplicity meets sophistication in every detail.
+               </div>
+               <div class="about-hotel-content-image1">
+                  <img src="static/image/about_image1.jpeg" height="280" class="about-hotel-image hidden">
+               </div>
+            </div>
+            <div class="about-content">
+               <div class="about-hotel-content-image2">
+                  <img src="static/image/about_image2.jpeg" height="280" class="about-hotel-image hidden">
+               </div>
+               <div class="about-hotel-content-body2 hidden">
+                  Panoramic Views and Rooftop Splendor Step into your room adorned with Eastern and Western touches, inspired by Sung Dynasty art. Gazing from the 43rd floor, the Taipei 101 tower graces the skyline, offering an enthralling city panorama. Unique to the hotel, the spectacular rooftop enhances your opulent stay at Group VIII Residences, promising a blend of luxury and breathtaking views.
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="room-hotel">
+         <br id="room-jump">
+         <div class="hotel-subtitle-content">
+            <div class="hotel-title-line"><hr></div>
+            <div class="hotel-title-title room-title-body">Room</div>
+            <div class="hotel-title-line"><hr></div>
+         </div>
+         <div class="room-image">
+            <div class="image-container hidden">
+               <img src="static/image/twin_room.jpg" class="image-item image-item-1" data-index="1">
+               <img src="static/image/single_room.jpg" class="image-item image-item-2" data-index="2">
+               <img src="static/image/king_room.jpg" class="image-item image-item-3" data-index="3">
+               <img src="static/image/queen_room.jpg" class="image-item image-item-4" data-index="4">
+            </div>
+            <div class="room-description hidden">
+               <div class="image-controls">
+                  <div class="image-controls-prev"><i class="fa-solid fa-chevron-left"></i></div>
+                  <div class="image-controls-next"><i class="fa-solid fa-chevron-right"></i></div>
+               </div>
+               <div class="room-index" style="display: none;">1</div>
+               <div class="room-type">King Room</div>
+               <div class="description-room">
+                  Indulge in the epitome of luxury with our king room, a spacious and grand accommodation option designed for the most discerning guests. The room features a majestic king-sized bed, offering unparalleled comfort and a truly regal sleeping experience. The expansive layout provides ample room to unwind, and the upscale furnishings and decor add an air of sophistication. Ideal for couples seeking a romantic escape or individuals desiring the utmost in comfort, the king room sets the standard for a lavish and memorable stay. Immerse yourself in the grandeur of this opulent retreat.
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="book-now-button-content">
+         <a href="{{ url_for('booking') }}" class="book-now-button">Book now</a>
+      </div>
+      <div class="promo-hotel">
+         <br id="promotion-jump">
+         <div class="hotel-subtitle-content">
+            <div class="hotel-title-line"><hr></div>
+            <div class="hotel-title-title promo-title-body">Promotion</div>
+            <div class="hotel-title-line"><hr></div>
+         </div>
+         <div class="about-hotel-content">
+            <div class="promotion-content">
+               <div class="promotion promotion-1">
+                  <div class="promotion-image hidden">
+                     <img src="static/image/promo_image1.jpeg" class="promo-hotel-image">
+                  </div>
+                  <div class="promotion-text hidden">
+                     <strong>Exclusive Solo Retreat Special</strong>
+                     <br>
+                     <p>Book a Single Room and enjoy a 15% discount on your stay! Experience the perfect blend of tranquility and comfort in our cozy single rooms.</p>
+                  </div>
+               </div>
+               <div class="promotion promotion-2">
+                  <div class="promotion-image hidden">
+                     <img src="static/image/promo_image2.jpeg" class="promo-hotel-image">
+                  </div>
+                  <div class="promotion-text hidden">
+                     <strong>Twin Delight Package</strong>
+                     <br>
+                     <p>Book a Twin Room for you and a companion and receive a complimentary room upgrade! Revel in the spacious and stylish surroundings of our double rooms at no extra cost.</p>
+                  </div>
+               </div>
+               <div class="promotion promotion-3">
+                  <div class="promotion-image hidden">
+                     <img src="static/image/promo_image3.jpeg" class="promo-hotel-image">
+                  </div>
+                  <div class="promotion-text hidden">
+                     <strong>Queen's Retreat Experience</strong>
+                     <br>
+                     <p>Indulge in luxury with a stay in our Queen Room and receive a complimentary spa voucher for a truly regal experience. Pamper yourself in style and comfort during your royal retreat.</p>
+                  </div>
+               </div>
+               <div class="promotion promotion-4">
+                  <div class="promotion-image hidden">
+                     <img src="static/image/promo_image4.jpeg" class="promo-hotel-image">
+                  </div>
+                  <div class="promotion-text hidden">
+                     <strong>King's Grand Getaway</strong>
+                     <br>
+                     <p>Book our King Room and enjoy a complimentary gourmet dinner for two at our exquisite onsite restaurant. Experience the grandeur of our spacious rooms and savor a delightful culinary journey.</p>
+                  </div>
+               </div>
+               <div class="promotion promotion-5">
+                  <div class="promotion-image hidden">
+                     <img src="static/image/promo_image5.jpeg" class="promo-hotel-image">
+                  </div>
+                  <div class="promotion-text hidden">
+                     <strong>Extended Royalty Stay</strong>
+                     <br>
+                     <p>Extend your royal stay! Book any room type for three nights and get the fourth night free. Experience an extended period of luxury and comfort in our thoughtfully designed accommodations.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="closing">
+      <div class="apapun">
+         <div class="Name_Content">
+            <div class="Name_Group8">Group 8:</div>
+            <div>
+               <div class="Name_kevin">楊漢祥 110570037 經管三</div>
+               <div class="Name_bryant">陳軒元 111590058 資工二</div>
+               <div class="Name_wesley">楊君威 111590059 資工二</div>
+               <div class="Name_felicia">鄭秀心 111590060 資工二</div>
+            </div>
+         </div>
+         <div class="Member_Task">
+            <div class="Each_Member_Task">Each member task:</div>
+            <div>
+               <div class="Task_kevin">楊漢祥 110570037 經管三 : Website Design and Testing</div>
+               <div class="Task_bryant">陳軒元 111590058 資工二 : Backend and Database</div>
+               <div class="Task_wesley">楊君威 111590059 資工二 : Frontend</div>
+               <div class="Task_felicia">鄭秀心 111590060 資工二 : Backend and Database </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="static/home.js"></script>
+   <script src="static/image_slider.js"></script>
+   <script src="static/scroll.js"></script>
+   <script src="static/translate_home.js"></script>
+</body>
+</html>

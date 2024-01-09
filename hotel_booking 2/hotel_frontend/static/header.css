@@ -1,0 +1,160 @@
+/* navigation bar */
+.nav-bar{
+   display: flex;
+   background-image: linear-gradient(#313131, #ffff0000);
+   width: 100%;
+   height: 120px;
+   padding: 15px;
+   overflow-x: hidden;
+   position: absolute;
+}
+.logo-and-leftmenu{
+   overflow: hidden;
+   display: flex;
+   margin-left: 20px;
+   height: 31px;
+   width: 300px;
+}
+.logo,.menuleft-button{
+   color: white;
+   justify-content: center;
+   display: block;
+   padding: 5px;
+   margin-left: 15px;
+   margin-right: 10px;
+   text-align: center;
+   cursor: pointer;
+}
+.logo{
+   overflow: hidden;
+}
+.logo a,.menu-nav-bar a{
+   text-decoration: none;
+   color: #ffffff;
+   overflow: hidden;
+}
+.menu-nav-bar{
+   text-decoration: none;
+   color: white;
+   display: flex;
+   justify-content: center;
+   margin-left: 50px;
+   margin-right: 50px;
+   width: 100%;
+   height: 120px;
+}
+.menubutton{
+   overflow: hidden;
+   width: 100px;
+   height: 28px;
+   justify-content: center;
+   display: block;
+   padding: 5px;
+   text-align: center;
+   cursor: pointer;
+}
+.lang{
+   width: 100px;
+}
+.lang-button{
+   padding: 5px;
+   height: 28px;
+   justify-content: center;
+   display: block;
+   text-align: center;
+   cursor: pointer;
+}
+.menubutton:hover,.lang-button:hover{
+   background-color: #ff4d4d;
+}
+.menubutton:active{
+   background-color: #8e2222;
+}
+.lang ul{
+   list-style: none;
+   background-color: #303030;
+   color: white;
+   display: none;
+}
+.lang:hover,.lang-menu{
+   display: block;
+}
+.lang-list a{
+   width: 100%;
+   text-align: center;
+   text-decoration: none;
+   background-color: #303030;
+   color: #ffffff;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   cursor: pointer;
+   display: block;
+}
+li.lang-list a:hover{
+   background-color: #ff4d4d;
+}
+li.lang-list a:active{
+   background-color: #8e2222;
+}
+.lang:hover ul{
+   display: block;
+}
+/* menu bar left side */
+.menu-left{
+   z-index: 100;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   background-color: #0000006c;
+   overflow: hidden;overflow-y: hidden;
+   display: none;
+}
+.logo-left{
+   color: white;
+   justify-content: center;
+   display: block;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   text-align: center;
+   cursor: pointer;
+}
+.menu-left-content{
+   animation: showmenu 0.5s;
+   overflow: hidden;
+   background-color: #303030;
+   width: 40vh;
+   height: 100%;
+}
+.menu-left-space{
+   width: 100%;
+   height: 100%;
+}
+.menu-nav-bar-left{
+   margin-top: 20vh;
+   height: 100%;
+   color: white;
+   width: 100%;
+}
+.logo-left{
+   padding: 5px;
+}
+.menubutton-left{
+   text-decoration: none;
+   color: white;
+   justify-content: center;
+   display: block;
+   padding: 13px;
+   text-align: center;
+   cursor: pointer;
+}
+.menubutton-left:hover{
+   background-color: #ff4d4d;
+}
+.menubutton-left:active{
+   background-color: #8e2222;
+}
+@keyframes showmenu{
+   from {transform: translateX(-200px);} 
+   to {transform: translateX(0px);}
+}
